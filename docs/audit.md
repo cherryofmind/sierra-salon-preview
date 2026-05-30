@@ -20,6 +20,21 @@ Date: 2026-05-31
   - warranty.
   - price guide.
   - pre-visit FAQ.
+- Added descriptive hero image alt text, high-priority image preload, `fetchpriority`, focus-visible styles, `referrer` policy meta, and `noopener noreferrer` for external links.
+
+## Security Headers Recommendation
+
+GitHub Pages does not allow custom response headers such as HSTS or CSP from repository files. On the final hosting/CDN layer, configure:
+
+```text
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: camera=(), microphone=(), geolocation=()
+Content-Security-Policy: default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://w2114769.yclients.com https://static.tildacdn.com; frame-src https://w2114769.yclients.com https://*.yclients.com; connect-src 'self' https:;
+```
+
+The CSP must be tested after connecting the final booking widget and analytics.
 
 ## Competitor Signals
 
