@@ -269,6 +269,12 @@ h2 {
   font-size: 26px;
 }
 .offer-card p, .service-card p { color: var(--muted); margin: 0; }
+.image-caption {
+  display: block;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
 .offer-card.feature {
   grid-row: span 2;
   display: grid;
@@ -326,6 +332,15 @@ h2 {
   padding: 18px 20px 22px;
 }
 .service-card p { color: var(--muted); }
+.card-link {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--green-2);
+  font-weight: 800;
+}
+.card-link:hover {
+  color: var(--coral);
+}
 
 .standards-grid {
   display: grid;
@@ -491,6 +506,10 @@ details p { color: var(--muted); max-width: 760px; }
   color: var(--muted);
 }
 
+.mobile-sticky-cta {
+  display: none;
+}
+
 .reveal {
   opacity: 1;
   transform: none;
@@ -574,7 +593,7 @@ details p { color: var(--muted); max-width: 760px; }
     z-index: 2;
     left: 18px;
     right: 18px;
-    bottom: 34px;
+    bottom: 96px;
     margin: 0;
     max-width: none;
     grid-template-columns: 1fr;
@@ -622,6 +641,38 @@ details p { color: var(--muted); max-width: 760px; }
   }
   .phone-card { min-height: 460px; }
   .book { width: calc(100% - 28px); padding: 24px; }
+  .footer {
+    padding-bottom: 92px;
+  }
+  .mobile-sticky-cta {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 30;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    border-radius: 999px;
+    background: rgba(18, 63, 49, 0.92);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  }
+  .mobile-sticky-cta a {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 800;
+  }
+  .mobile-sticky-cta a:last-child {
+    color: var(--green);
+    background: var(--acid);
+  }
   .price-table div {
     grid-template-columns: 1fr;
     gap: 8px;

@@ -21,6 +21,7 @@ Date: 2026-05-31
   - price guide.
   - pre-visit FAQ.
 - Added descriptive hero image alt text, high-priority image preload, `fetchpriority`, focus-visible styles, `referrer` policy meta, and `noopener noreferrer` for external links.
+- Added lazy loading and async decoding for non-critical images, richer service image alt text, service-card CTAs, an offer caption, and a mobile sticky CTA for phone/booking actions.
 
 ## Security Headers Recommendation
 
